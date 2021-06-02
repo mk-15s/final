@@ -5,12 +5,12 @@ library(data.table)
 
 # Load data ----
 
-summary_user <- as.data.table(readRDS("C:/Users/smk04/OneDrive/1411~1-DESKTOP-GN240C3/대용량 프로젝트/App-1/data/summaryuser.rds"))
-age_user <- as.data.table(readRDS("C:/Users/smk04/OneDrive/1411~1-DESKTOP-GN240C3/대용량 프로젝트/App-1/data/ageuser.rds"))
-season_num_k <- as.data.frame(readRDS("C:/Users/smk04/OneDrive/1411~1-DESKTOP-GN240C3/대용량 프로젝트/App-1/data/seasonnumk.rds"))
+summary_user <- as.data.table(readRDS("data/summaryuser.rds"))
+age_user <- as.data.table(readRDS("data/ageuser.rds"))
+season_num_k <- as.data.frame(readRDS("data/seasonnumk.rds"))
 season_num_k$people <- "내국인"
 names(season_num_k)[2] <- "seasonnum"
-season_num_f <- as.data.frame(readRDS("C:/Users/smk04/OneDrive/1411~1-DESKTOP-GN240C3/대용량 프로젝트/App-1/data/seasonnumf.rds"))
+season_num_f <- as.data.frame(readRDS("data/seasonnumf.rds"))
 season_num_f$people <- "외국인"
 names(season_num_f)[2] <- "seasonnum"
 season_num <- rbind(season_num_k, season_num_f)
